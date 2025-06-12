@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Functionality Test Email</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+
+	<style>
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: normal;
+		  font-weight: 300;
+		  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2) format('woff2');
+		  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+		
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+		  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+		
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: normal;
+		  font-weight: 600;
+		  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');
+		  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+		
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+		
+		@media only screen and (max-device-width: 599px) {
+			.mobile-stack {
+				width: 100% !important;
+				max-width: 100% !important;
+				display: block !important;	
+			}
+			.mobile-stack-inline {
+				width: 100% !important;
+				max-width: 100% !important;
+				display: inline !important;	
+			}
+			
+			.header-img {
+				width: 250px !important;
+				height: auto !important;
+				padding: 5% 0 70% 0 !important;
+			}
+			
+			.subheader-td {
+				padding: 0 8% 0 8% !important;
+			}
+			
+			.subheader-heading {
+				font-size: 20px !important;
+				padding: 30px 0 0 0 !important;
+			}
+			
+			.subheader-text {
+				font-size: 14px !important;
+				line-height: 17px !important;
+			}
+			
+			.feature-2-td {
+				padding: 20px 5% 0 5% !important;
+			}
+			
+			.feature-2-heading-icon {
+				padding: 40px 0 0 0 !important;
+				width: 35px !important;
+				max-width: 35px !important;
+			}
+			
+			.feature-2-heading {
+				padding: 40px 0 0 10px !important;
+			}
+			
+			.feature-2-icon {
+				width: 35px !important;
+				max-width: 35px !important;
+			}
+			
+			.feature-2-text {
+				padding: 15px 0 0 0 !important;
+				font-size: 14px !important;
+				line-height: 17px !important;
+			}
+			
+			.flower {
+				padding: 20px 0 0 0 !important;
+			}
+			
+			.flower img {
+				width: 100% !important;
+				max-width: 275px !important;
+			}
+			
+			.headline-2 {
+				padding: 0 !important;
+			}
+			
+			.feature-3 {
+				padding: 50px 0 50px 0 !important;
+			}
+			
+			.feature-3-text {
+				padding: 10px 25% 0 25% !important;
+				font-size: 14px !important;
+				line-height: 17px !important;
+			}
+			
+			.headline-3 {
+				padding: 30px 0 10px 0 !important;
+			}
+			
+			.feature-4-icon {
+				width: 40px !important;
+				max-width: 40px !important;
+				padding: 40px 0 0 0 !important;
+			}
+			
+			.feature-4-text {
+				padding: 10px 10% 0 10% !important;
+				font-size: 14px !important;
+				line-height: 17px !important;
+			}
+			
+			.feature-4-copy {
+				font-size: 14px !important;
+			}
+			
+			.link-3 {
+				width: 100% !important;
+				max-width: 100% !important;
+				display: block !important;
+				margin: 15px 0 0 0 !important;
+				border-top: 2px solid #e3e3e3 !important;
+				padding: 10px 0 0 0 !important;	
+			}
+			
+			.mobile-show, *[class="mobile-show"] {
+				display: inline !important;
+				visibility: visible !important;
+    		}
+			
+			.mobile-hide, *[class="mobile-hide"] {
+				overflow: hidden !important;
+				display: none !important;
+				visibility: hidden !important;
+				line-height:0px !important;
+    		}
+			
+			.mobile-padding {
+				padding: 20px 5% 0 5% !important;
+			}
+		
+			.mobile-nopadding {
+				padding: 0 0 0 0 !important;
+			}
+		
+		}
+	</style>
+    <!--[if (gte mso 9) | (IE)]>
+	<xml>
+		<o:OfficeDocumentSettings>
+			<o:AllowPNG />
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+</head>
+
+<body>
+<!-- START OuterMost Table -->
+<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; max-width:640px; border: none; margin: 0 auto; padding: 0;">
+	<tr>
+    	<td>
+        	<!-- START Outer Border Table -->
+        	<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0;">
+                <tr>
+                    <td style="border-left: 1px solid #979797; border-right: 1px solid #979797; border-bottom: 1px solid #979797; padding: 0; margin: 0;">
+                    	<!-- START Main Content -->
+                        <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0;">
+                            <tr>
+                                <td style="margin: 0 auto; padding: 0;">
+                                    <!-- START Header -->
+                                    <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0; background-color: #fafafa;">
+                                        <tr>
+                                            <td style="text-align: center;" style="padding: 30px 0 30px 0;">
+                                                <!-- START Feature 1 -->
+                                                <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0; background-color: #fafafa;">
+                                                    <tr>
+                                                        <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 300; color: #333333; text-align: center; padding: 30px 0 40px 0;">
+                                                            <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                            Headline 1
+                                                            <!--[if (mso) | (IE)]></span><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        	<!--[if !mso]><!-- -->
+                                                            <table class="mobile-show" cellpadding="0" cellspacing="0" border="0" width="100%" height="auto" style="display: none; visibility: hidden; mso-hide: all;">
+                                                                <tr>
+                                                                    <td align="center" bgcolor="#fafafa" valign="top" style="padding: 0 0 50px 0; margin: 0 auto; text-align: center;">
+                                                                        <table align="center" cellpadding="0" cellspacing="0" border="0" width="300" style="width: 230px; max-width:560px; border: none; margin: 0 auto;">
+                                                                            <tr>
+                                                                                <td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 300; color: #333333; text-align: center;">
+                                                                                    <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Text Overlay
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 300; color: #333333; text-align: center; padding: 10px 0 0 0; line-height: 17px;">
+                                                                                    <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!--<![endif]-->
+                                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" height="auto">
+                                                                <tr>
+                                                                    <td bgcolor="#fafafa" valign="top">
+                                                                        <div style="background-color:#fafafa;">
+                                                                            <!--[if gte mso 9]>
+                                                                            <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+                                                                            <v:fill type="tile" src="https://i.imgur.com/LaRmY7K.png" color="#fafafa"/>
+                                                                            </v:background>
+                                                                            <![endif]-->
+                                                                            <table height="100%" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                <tr>
+                                                                                  <td class="header-img" valign="top" align="center" background="https://i.imgur.com/5iANfY5.png" style="background-size: cover; width: 100%; height: 100%; padding: 5% 0 55% 35%; background-repeat: no-repeat; background-position: center; ">
+                                                                                        <table class="mobile-hide" align="left" cellpadding="0" cellspacing="0" border="0" width="300" style="width: 200px; max-width:200px; border: none; margin: 0 auto;">
+                                                                                            <tr>
+                                                                                                <td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 300; color: #333333; text-align: left;">
+                                                                                                	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                                    Text Overlay
+                                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 300; color: #333333; text-align: left; padding: 10px 0 0 0; line-height: 17px;">
+                                                                                                	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- END Feature 1 -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0; background-color: #fafafa;">
+                                        <tr>
+                                            <td class="subheader-td" align="center" style="padding: 30px 20px 35px 20px; margin: 0;">
+                                                <!-- START Header BOTTOM -->
+                                                <!-- Left Section -->
+                                                <table class="mobile-stack" cellpadding="0" cellspacing="0" border="0" width="235" style="width: 100%; border: none; margin: 0; padding: 0; max-width: 235px; display: inline-table; vertical-align: top;">
+                                                    <tr>
+                                                        <td class="subheader-heading" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #333333; text-align: center;">
+                                                            <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                            Feature One
+                                                            <!--[if (mso) | (IE)]></span><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="subheader-text" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: center; padding: 10px 0 0 0; line-height: 15px;">
+                                                            <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                            <!--[if (mso) | (IE)]></span><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="flower" align="center" style="text-align: center; padding: 30px 0 0 0; vertical-align: top;">
+                                                            <img alt="flower" src="https://i.imgur.com/1fA1iWt.png" style="width: 100%; max-width: 180px; height: auto;" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                
+                                                <!-- spacer -->
+                                                <table class="mobile-stack mobile-hide" cellpadding="0" cellspacing="0" border="0" width="10" style="width: 30px; border: none; margin: 0; padding: 0; max-width: 30px; display: inline-table; vertical-align: top;">
+                                                    <tr>
+                                                        <td style="padding: 0; margin: 0;">
+                                                       		&#160;
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                
+                                                <!-- Right Section -->
+                                                <table class="mobile-stack" cellpadding="0" cellspacing="0" border="0" width="235" style="width: 100%; border: none; margin: 0; padding: 0;  max-width: 235px;  display: inline-table; vertical-align: top;">
+                                                    <tr>
+                                                        <td class="subheader-heading" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #333333; text-align: center;">
+                                                        	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                            Feature Two
+                                                            <!--[if (mso) | (IE)]></span><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="subheader-text" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: center; padding: 10px 0 0 0; line-height: 15px;">
+                                                            <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                            <!--[if (mso) | (IE)]></span><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="flower" align="center" style="text-align: center; padding: 30px 0 0 0; vertical-align: top;">
+                                                            <img alt="flower" src="https://i.imgur.com/1fA1iWt.png" style="width: 100%; max-width: 180px; height: auto;" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- END Header BOTTOM -->
+                                        	</td>
+                                        </tr>
+                                    </table>
+                                    <!-- END Header -->
+                                    <!-- Feature 2 -->
+                                   <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0;">
+                                        <tr>
+                                            <td class="feature-2-td" align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 400; color: #333333; text-align: center; padding: 30px 20px 30px 20px;">
+                                            	<!-- START Content -->
+                                                <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0; background-color: #ffffff;">
+                                                    <tr>
+                                                        <td class="headline-2" align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 400; color: #333333; text-align: center; padding: 0 0 40px 0; line-height: 35px;">
+                                                            <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                            Headline 2<br/>
+                                                            with More Words
+                                                            <!--[if (mso) | (IE)]></span><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 400; color: #333333; text-align: center; padding: 0;">
+                                                        	<table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding: 0; margin: 0;">
+                                                        		<tr>
+                                                        			<td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 400; color: #333333; padding: 0;">
+                                                                        <!-- TOP LEFT -->
+                                                                        <table class="mobile-stack" cellpadding="0" cellspacing="0" border="0" width="240" style="width: 100%; max-width: 240px; border: none; margin: 0; padding: 0; display: inline-table;">
+                                                                            <tr>
+                                                                                <td class="feature-2-heading-icon" valign="top" align="left" style="padding: 0; margin: 0; vertical-align: top;">
+                                                                                    <img alt="flower icon" class="feature-2-icon" src="https://i.imgur.com/9CziDlF.png" style="width: 100%; max-width: 32px; height: auto;" />
+                                                                                </td>
+                                                                                <td class="feature-2-heading" valign="bottom" align="left" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #333333; text-align: left; padding: 0 0 0 10px; vertical-align: bottom;">
+                                                                                	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Subheader 1
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="feature-2-text" colspan="2" align="left" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: left; padding: 10px 5px 0 0; line-height: 15px;">
+                                                                                	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <!-- TOP RIGHT -->
+                                                                        <table class="mobile-stack" cellpadding="0" cellspacing="0" border="0" width="240" style="width: 100%; max-width: 240px; border: none; margin: 0; padding: 0; display: inline-table;">
+                                                                            <tr>
+                                                                                <td class="feature-2-heading-icon" valign="top" align="left" style="padding: 0; margin: 0; vertical-align: top;">
+                                                                                    <img alt="flower icon" class="feature-2-icon" src="https://i.imgur.com/9CziDlF.png" style="width: 100%; max-width: 30px; height: auto;" />
+                                                                                </td>
+                                                                                <td class="feature-2-heading" valign="bottom" align="left" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #333333; text-align: left; padding: 5px 0 0 10px; vertical-align: bottom;">
+                                                                                	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Subheader 2
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="feature-2-text" colspan="2" align="left" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: left; padding: 10px 0 0 0; line-height: 15px;">
+                                                                                	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="mobile-nopadding" style="padding: 20px 0 0 0; margin: 0;">
+                                                                        <!-- BOTTOM LEFT -->
+                                                                        <table class="mobile-stack" cellpadding="0" cellspacing="0" border="0" width="240" style="width: 100%; max-width: 240px; border: none; margin: 0; padding: 0; display: inline-table;">
+                                                                            <tr>
+                                                                                <td class="feature-2-heading-icon" valign="top" align="left" style="padding: 0; margin: 0; vertical-align: top;">
+                                                                                    <img alt="flower icon" class="feature-2-icon" src="https://i.imgur.com/9CziDlF.png" style="width: 100%; max-width: 30px; height: auto;" />
+                                                                                </td>
+                                                                                <td class="feature-2-heading" valign="bottom" align="left" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #333333; text-align: left; padding: 0 0 0 10px; vertical-align: bottom;">
+                                                                                	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Subheader 3
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="feature-2-text" colspan="2" align="left" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: left; padding: 10px 5px 0 0; line-height: 15px;">
+                                                                                	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <!-- BOTTOM RIGHT -->
+                                                                        <table class="mobile-stack" cellpadding="0" cellspacing="0" border="0" width="240" style="width: 100%; max-width: 240px; border: none; margin: 0; padding: 0; display: inline-table;">
+                                                                            <tr>
+                                                                                <td class="feature-2-heading-icon" valign="top" align="left" style="padding: 0; margin: 0; vertical-align: top;">
+                                                                                    <img alt="flower icon" class="feature-2-icon" src="https://i.imgur.com/9CziDlF.png" style="width: 100%; max-width: 30px; height: auto;" />
+                                                                                </td>
+                                                                                <td class="feature-2-heading" valign="bottom" align="left" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #333333; text-align: left; padding: 5px 0 0 10px; vertical-align: bottom;">
+                                                                                	<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Subheader 4
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="feature-2-text" colspan="2" align="left" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: left; padding: 10px 0 0 0; line-height: 15px;">
+                                                                               		<!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                                    <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                	</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>     
+                                                </table>
+                                                <!-- END Content -->
+                                            </td>
+                                        </tr>        
+                                    </table>
+                                    <!-- END Feature 2 -->
+                                    <!-- Feature 3 -->
+                                    <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 30px 20px 30px 20px;">
+										<tr>
+                                        	<td class="feature-3" style="padding: 30px 0 50px 0; background-color: #ffffff; border-top: 2px solid #d6d6d6; border-bottom: 2px solid #d6d6d6;">
+                                                <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto;">
+                                                    <tr>
+                                                        <td align="center" style="text-align: center; padding: 0; margin: 0;">
+                                                            <img alt="plant" src="https://i.imgur.com/0E7VySV.png" style="width: 100%; max-width: 160px; height: auto;" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="feature-3-text" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: center; padding: 10px 0 0 0; line-height: 15px;">
+                                                            <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->Check out our<span class="mobile-hide">&#160;</span><span class="mobile-show" style="display: none; visibility: hidden; mso-hide: all;"><br/></span>must-have apps.<!--[if (mso) | (IE)]></span><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #0d87cb; text-align: center; padding: 10px 0 0 0; line-height: 15px;">
+                                                            <a target="_blank" href="#" style="font-family: inherit; font-size: inherit; font-weight: inherit; color: #0d87cb; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->View our collection &#10093;<!--[if (mso) | (IE)]></span><![endif]--></a>
+                                                            <span class="mobile-show" style="display: none; visibility: hidden; mso-hide: all;">
+                                                                <br/>
+                                                                <a target="_blank" href="#" style="font-family: inherit; font-size: inherit; font-weight: inherit; color: #0d87cb; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->MOBILE ONLY Collection &#10093;<!--[if (mso) | (IE)]></span><![endif]--></a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                     		</td>
+                                        </tr>
+                                    </table>
+                                    <!-- END Feature 3 -->
+                                    <!-- Feature 4 -->
+                                    <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0; background-color: #ffffff;">
+                                        <tr>
+                                            <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 400; color: #333333; text-align: center; padding: 0 20px 30px 20px; margin: 0 auto;">
+                                            	<!-- START Content -->
+                                                <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0; background-color: #ffffff;">
+                                                    <tr>
+                                                        <td class="headline-3" align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 400; color: #333333; text-align: center; padding: 30px 0 30px 0;">
+                                                            <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                            Headline 3
+                                                            <!--[if (mso) | (IE)]></span><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 400; color: #333333; text-align: center; padding: 0;">
+                                                            <!-- LEFT -->
+                                                            <table class="mobile-stack" align="center" cellpadding="0" cellspacing="0" border="0" width="160" style="width: 100%; max-width: 160px; border: none; margin: 0; padding: 0; display: inline-block; vertical-align: top;">
+                                                                <tr>
+                                                                    <td valign="top" align="center" style="padding: 0; margin: 0;">
+                                                                        <img alt="flower icon" class="feature-4-icon" src="https://i.imgur.com/9CziDlF.png" style="width: 100%; max-width: 34px; height: auto;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="left" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #333333; text-align: center; padding: 10px 5px 0 5px;">
+                                                                        <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                        Title 1
+                                                                        <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="feature-4-text feature-4-copy" align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: center; padding: 10px 5px 0 5px; line-height: 15px;">
+                                                                        <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #0d87cb; text-align: center; padding: 10px 0 0 0;">
+                                                                        <a class="feature-4-copy" target="_blank" href="#" style="font-family: inherit; font-size: inherit; font-weight: inherit; color: #0d87cb; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->View the guide &#10093;<!--[if (mso) | (IE)]></span><![endif]--></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #0d87cb; text-align: center; padding: 10px 0 0 0;">
+                                                                        <a class="feature-4-copy" target="_blank" href="#" style="font-family: inherit; font-size: inherit; font-weight: inherit; color: #0d87cb; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->Download in our app &#10093;<!--[if (mso) | (IE)]></span><![endif]--></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- MIDDLE -->
+                                                            <table class="mobile-stack" align="center" cellpadding="0" cellspacing="0" border="0" width="160" style="width: 100%; max-width: 160px; border: none; margin: 0; padding: 0; display: inline-block; vertical-align: top;">
+                                                                <tr>
+                                                                    <td align="center" style="padding: 0; margin: 0;">
+                                                                        <img alt="flower icon" class="feature-4-icon" src="https://i.imgur.com/9CziDlF.png" style="width: 100%; max-width: 34px; height: auto;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #333333; text-align: center; padding: 10px 5px 0 5px;">
+                                                                        <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                        Title 2
+                                                                        <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="feature-4-text feature-4-copy" align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: center; padding: 10px 5px 0 5px; line-height: 15px;">
+                                                                        <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #0d87cb; text-align: center; padding: 10px 0 0 0;">
+                                                                        <a class="feature-4-copy" target="_blank" href="#" style="font-family: inherit; font-size: inherit; font-weight: inherit; color: #0d87cb; text-decoration: none;">Find more info &#10093;<!--[if (mso) | (IE)]></span><![endif]--></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- RIGHT -->
+                                                            <table class="mobile-stack-inline" align="center" cellpadding="0" cellspacing="0" border="0" width="160" style="width: 100%; max-width: 160px; border: none; margin: 0; padding: 0; display: inline-block; vertical-align: top;">
+                                                                <tr>
+                                                                    <td align="center" style="padding: 0; margin: 0;">
+                                                                        <img alt="flower icon" class="feature-4-icon" src="https://i.imgur.com/9CziDlF.png" style="width: 100%; max-width: 34px; height: auto;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; color: #333333; text-align: center; padding: 10px 5px 0 5px;">
+                                                                        <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                        Title 3
+                                                                        <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="feature-4-text feature-4-copy" align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #333333; text-align: center; padding: 10px 5px 0 5px; line-height: 15px;">
+                                                                        <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                                        Follow us on Twitter <a target="_blank" href="#" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: bold; color: #0d87cb; text-decoration: none;">@CompanyName<!--[if (mso) | (IE)]></span><![endif]--></a>.
+                                                                        <!--[if (mso) | (IE)]></span><![endif]-->
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #0d87cb; text-align: center; padding: 10px 0 0 0;">
+                                                                        <a class="feature-4-copy" target="_blank" href="#" style="font-family: inherit; font-size: inherit; font-weight: inherit; color: #0d87cb; text-decoration: none;">Get Support &#10093;</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>     
+                                                </table>
+                                                <!-- END Content -->
+                                            </td>
+                                        </tr>        
+                                    </table>
+                                    <!-- END Feature 4 -->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- END Main Content -->
+                        <!-- START Footer -->
+                        <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0; background-color: #eeeeee;">
+                            <tr>
+                                <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 400; color: #333333; text-align: center; padding: 0; margin: 0 auto;">
+                                    <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0; background-color: #eeeeee;">
+                                        <tr>
+                                            <td class="mobile-padding" align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 400; color: #333333; text-align: center; padding: 20px 20px 0 20px; margin: 0 auto;">
+                                                <!-- START Footer URLS -->
+                                                <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; border: none; margin: 0 auto; padding: 0; background-color: #eeeeee;">
+                                                    <tr>
+                                                        <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 400; color: #999999; text-align: center; padding: 0; margin: 0 auto;">
+                                                            <a target="_blank" href="#" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; color: #999999; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->Link 1</a>&#160;&#160;&#160;|&#160;&#160;&#160;<a target="_blank" href="#" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; color: #999999; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->Link 2<!--[if (mso) | (IE)]></span><![endif]--></a>&#160;&#160;&#160;|&#160;&#160;&#160;<a target="_blank" href="tel:18006922877" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; color: #999999; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->1-800-123-4567<!--[if (mso) | (IE)]></span><![endif]--></a><span class="mobile-hide">&#160;&#160;&#160;|&#160;&#160;&#160;&#160;</span><a class="link-3" target="_blank" href="#" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; color: #999999; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->Link 3<!--[if (mso) | (IE)]></span><![endif]--></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 10px; font-weight: 400; color: #333333; text-align: center; padding: 0; margin: 0; border-bottom: 2px solid #e3e3e3;">
+                                                            &#160;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="padding: 0; margin: 0;">
+                                                            &#160;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 10px; font-weight: 400; color: #999999; text-align: left; padding: 0; margin: 0;">
+                                                            <!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a target="_blank" href="#" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; color: #737373; text-decoration: none;">Click here</a> to see complete list.
+                                                            <br/><br/>
+                                                            &#169; 2019 Company Inc. 123 Main Street, San Francisco, CA 94111.
+                                                            <br/><br/>
+                                                            <a target="_blank" href="#" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; color: #737373; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->All Rights Reserved<!--[if (mso) | (IE)]></span><![endif]--></a>&#160;&#160;|&#160;&#160;<a target="_blank" href="#" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; color: #737373; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->Privacy Policy<!--[if (mso) | (IE)]></span><![endif]--></a>&#160;&#160;|&#160;&#160;<a target="_blank" href="#" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; color: #737373; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->Login<!--[if (mso) | (IE)]></span><![endif]--></a>
+                                                            <br/><br/>
+                                                            <a target="_blank" href="#" style="font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; color: #737373; text-decoration: none;"><!--[if (mso) | (IE)]><span style="font-family: Arial, Helvetica, sans-serif; font-size: inherit;"><![endif]-->Click here<!--[if (mso) | (IE)]></span><![endif]--></a> to unsubscribe.
+                                                            <!--[if (mso) | (IE)]></span><![endif]-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="padding: 0; margin: 0;">
+                                                            &#160;
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- END Footer URLS -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- END Footer -->
+                    </td>
+                </tr>
+            </table>
+            <!-- END Outer Border Table -->
+        </td>
+    </tr>
+</table>
+<!-- END OuterMost Table -->
+</body>
+</html>
